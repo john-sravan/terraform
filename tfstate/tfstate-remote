@@ -1,0 +1,8 @@
+terraform {
+  backend "s3" {
+    bucket = "terraform-remote"
+    key    = "count"
+    region = "us-east-1"
+    dynamodb_table = "State-lock"
+  }
+}
